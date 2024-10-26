@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Backtothefuture2002';
+    src: url('./fonts/Backtothefuture2002-Regular.woff2') format('woff2'),
+         url('./fonts/Backtothefuture2002.woff') format('woff'),
+         url('./fonts/Backtothefuture2002.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DigitalFont';
+    src: url('./fonts/TickingTimebombBB-Italic.woff2') format('woff2'),
+         url('./fonts/DigitalFont.woff') format('woff'),
+         url('./fonts/DigitalFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.delorean {
+    height: 30vh;
+    position : absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.gradient-text{
+    font-family: 'Backtothefuture2002', serif;
+    font-size: 50px;
+    background: linear-gradient(#ff0000, #ff9900, #ffff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, rgb(102, 97, 131), rgb(2, 2, 110),rgb(24, 24, 121));
+    background-size: cover; /* Ensures the gradient stretches across the entire page */
+    background-attachment: fixed; /* Keeps the gradient in place during scrolling */
+    margin: 0;
+    height: 100vh; /* Sets body height to 100% of viewport height */
+}
+
+.ticker-container {
+    overflow: hidden;
+    width: 95%;
+    text-align: center;
+    background-color: black;
+    padding: 10px 0;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    margin: 0 auto;
+}
+
+.dashboard {
+    overflow: hidden;
+    background: linear-gradient(#2e2a2a, #9a9a99, #2e2a2a);
+    width: 100%;
+    text-align: center;
+    position : absolute;
+    bottom:0;
+    padding: 80px 0;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    margin: 0 auto;
+
+}
+
+/* Ticker Scrolling Text */
+.ticker {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+    font-family: 'DigitalFont', Courier, monospace; /* Digital font style */
+    font-size: 1.5em;
+    color: red;
+}
+
+/* Space between items */
+.ticker span {
+    padding: 0 2em;
+}
+
+/* Keyframes for Scrolling Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
