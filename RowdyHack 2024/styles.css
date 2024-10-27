@@ -20,7 +20,7 @@
     height: 30vh;
     position: absolute;
     right: 0;
-    bottom: 160px;
+    bottom: 230px;
 }
 
 .gradient-text {
@@ -81,11 +81,35 @@ video {
 
 .tape {
     flex: 1; /* Allow items to grow and shrink */
-    max-width: 150px; /* Optional: Set a max width */
+    max-width: 130px; /* Optional: Set a max width */
     overflow: hidden;
     text-align: center;
     background-color: rgb(150, 20, 20); /* Brighter color */
     padding: 8px 0;
+    margin: 0 10px; /* Add some spacing between items */
+    position: relative;
+}
+
+.tape-text {
+    flex: 1; /* Allow items to grow and shrink */
+    max-width: 130px; /* Optional: Set a max width */
+    overflow: hidden;
+    text-align: center;
+    background-color: rgb(120, 11, 11);
+    padding: 8px 0;
+    margin: 0 10px; /* Add some spacing between items */
+    position: relative;
+}
+
+.tape-text {
+    flex: 1; /* Allow items to grow and shrink */
+    max-width: 150px; /* Optional: Set a max width */
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: rgb(196, 193, 193);
+    background-color: rgb(120, 11, 11);
     margin: 0 10px; /* Add some spacing between items */
     position: relative;
 }
@@ -110,11 +134,27 @@ video {
     white-space: nowrap;
     font-family: 'DigitalFont', Courier, monospace;
     font-size: 70px;
-    color: #ff3333; /* Brighter color */
+    color: red;
     position: relative;
     width: 100%;
     left: 0%;
     bottom: 0px;
+}
+
+.month-tape-position {
+    position: fixed;
+    bottom: 175px;
+    left: 18px;
+    margin: 10px;
+    z-index: 10;
+}
+
+.day-tape-position {
+    position: fixed;
+    bottom: 175px;
+    left: 200px;
+    margin: 10px;
+    z-index: 10;
 }
 
 .month-position {
@@ -192,6 +232,11 @@ video {
     box-shadow: 0 0 10px rgba(255, 50, 50, 0.7); /* Brighter shadow */
     margin: 0 auto;
     position: relative;
+}
+
+.spacer {
+    height: 20px; /* Adjust the height as needed */
+    background-color: transparent; /* Ensure the background is transparent */
 }
 
 .image {
