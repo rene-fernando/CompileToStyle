@@ -21,7 +21,34 @@ princessr=cv2.imread('./shirts/princessr.png', cv2.IMREAD_UNCHANGED)
 glasses=cv2.imread('./shirts/g.png', cv2.IMREAD_UNCHANGED)
 helmet=cv2.imread('./shirts/helmet.png', cv2.IMREAD_UNCHANGED)
 paths="./shirts/"
-listOutfits=[[shirt_image,lshoulder_image,rshoulder_image],[princess_shirt,princessl,princessr]]
+
+s3 = cv2.imread('./shirts/3s.png', cv2.IMREAD_UNCHANGED)
+l3 = cv2.imread('./shirts/3r.png', cv2.IMREAD_UNCHANGED)
+r3=cv2.imread('./shirts/3r.png', cv2.IMREAD_UNCHANGED)
+
+s4 = cv2.imread('./shirts/4s.png', cv2.IMREAD_UNCHANGED)
+l4 = cv2.imread('./shirts/4l.png', cv2.IMREAD_UNCHANGED)
+r4=cv2.imread('./shirts/4r.png', cv2.IMREAD_UNCHANGED)
+
+s5 = cv2.imread('./shirts/5s.png', cv2.IMREAD_UNCHANGED)
+l5 = cv2.imread('./shirts/5l.png', cv2.IMREAD_UNCHANGED)
+r5=cv2.imread('./shirts/5r.png', cv2.IMREAD_UNCHANGED)
+
+s6 = cv2.imread('./shirts/6s.png', cv2.IMREAD_UNCHANGED)
+l6 = cv2.imread('./shirts/6l.png', cv2.IMREAD_UNCHANGED)
+r6=cv2.imread('./shirts/6r.png', cv2.IMREAD_UNCHANGED)
+
+s7 = cv2.imread('./shirts/7s.png', cv2.IMREAD_UNCHANGED)
+l7 = cv2.imread('./shirts/7l.png', cv2.IMREAD_UNCHANGED)
+r7=cv2.imread('./shirts/7r.png', cv2.IMREAD_UNCHANGED)
+
+g2 = cv2.imread('./shirts/g2.png', cv2.IMREAD_UNCHANGED)
+g3 = cv2.imread('./shirts/g3.png', cv2.IMREAD_UNCHANGED)
+g4=cv2.imread('./shirts/g4.png', cv2.IMREAD_UNCHANGED)
+g5=cv2.imread('./shirts/g5.png', cv2.IMREAD_UNCHANGED)
+
+listOutfits=[[shirt_image,lshoulder_image,rshoulder_image],[princess_shirt,princessl,princessr],[s3,l3,r3],[s4,l4,r4],[s5,l5,r5],[s6,l6,r6],[s7,l7,r7]]
+glassesList = [glasses,g2,g3,g4,g5]
 # Open the webcam (0 is the default camera)
  
 cap = cv2.VideoCapture(0)
@@ -33,9 +60,15 @@ if not cap.isOpened():
 
 
 start_time = time.time()
-
+index=0
+index2=0
 while True:
-    
+    if time.time()-start_time > 3:
+        start_time = time.time()
+        index=(index+1)%7
+        index2=(index+1)%5
+        
+
     ret, frame = cap.read()
 
     if not ret:
@@ -44,7 +77,7 @@ while True:
 
     # Predict with YOLOv8 on the current frame
     results = model.predict(source=frame, save=False, save_txt=False, conf=0.75)  # Explicitly calling .predict()
-    index=0
+    
     applied_shirt=listOutfits[index][0]
     applied_left = listOutfits[index][1]
     applied_right = listOutfits[index][2]
@@ -119,7 +152,7 @@ while True:
             elif int(label) == 0:  # Replace with the correct class index for the shirt
                 # Extract the bounding box coordinates
                 x1, y1, x2, y2 = map(int, box)  # Convert to integer coordinates
-                newImage=glasses
+                newImage=glassesList[index2]
                 
                 # Draw the bounding box around the detected shirt
                 # cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)  # Green box with thickness 2
