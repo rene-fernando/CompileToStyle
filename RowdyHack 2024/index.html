@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1 class="gradient-text">Compile to Style</h1>
+
     <div class="ticker-container">
         <div class="ticker">
             <span>Breaking News</span>
@@ -19,21 +20,47 @@
                 spectacular crash into the courthouse clock tower. Mayor Goldie Wilson promises to fix the clock before 
                 it strikes 88!</span>
             <span>Stay tuned for updates on this developing story!</span>
-        
         </div>
     </div>
-    <div class="camera-container">
-        <div class="camera">
-            <video id="video" autoplay playsinline></video>
-        </div>
-        <script src="script.js"></script>
-    <div class="dashboard">
-        <div class="ticker-container" style="width: 15%; height:calc(30px*2)">
+
+    <video id="video" autoplay muted playsinline style="display:none;"></video>
+    <canvas id="canvas"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+    <div class="image">
+        <div class="dashboard-month month-position">
             <div class="dashboard-text">
-                <span>Jul</span>
+                <span>Oct</span>
+            </div>
+        </div>
+        <div class="dashboard-2text day-position">
+            <div class="dashboard-text bottom-left" left:25px>
+                <span>27</span>
+            </div>
+        </div>
+        <div class="dashboard-year year-position">
+            <div class="dashboard-text bottom-left" left:25px>
+                <span>3024</span>
+            </div>
+        </div>
+        <div class="dashboard-2text hour-position">
+            <div class="dashboard-text bottom-left" left:25px>
+                <span>12</span>
+            </div>
+        </div>
+        <div class="dashboard-2text minute-position">
+            <div class="dashboard-text bottom-left" left:25px>
+                <span>00</span>
             </div>
         </div>
     </div>
+
     <img src="./assets/1981-delorean-back-to-the-future-_0002_3-removebg-preview.png" alt="1981 DeLorean" class="delorean"/>
+    
+   
+        
+
+    <script src="./script.js"></script>
 </body>
 </html>
