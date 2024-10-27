@@ -32,9 +32,10 @@ if not cap.isOpened():
 
 
 
-    
+start_time = time.time()
+
 while True:
-    time.sleep(1.5)
+    
     ret, frame = cap.read()
 
     if not ret:
@@ -145,8 +146,7 @@ while True:
     
 
     # Display the frame
-    cv2.imshow('YOLOv8 Webcam', frame)  # Use the updated frame with the overlay
-    cv2.imwrite("image.jpg",frame)
+    cv2.imwrite("./RowdyHack 2024/image.jpg",frame)
     # Press 'q' to exit the loop
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
