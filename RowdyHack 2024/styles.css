@@ -26,7 +26,7 @@
 .gradient-text {
     font-family: 'Backtothefuture2002', serif;
     font-size: 50px;
-    background: linear-gradient(#ff0000, #ff9900, #ffff00);
+    background: linear-gradient(#ff3333, #ffcc33, #ffff33); /* Brighter colors */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -46,14 +46,14 @@ body {
     overflow: hidden;
     width: 95%;
     text-align: center;
-    background-color: rgb(50, 44, 44);
+    background-color: rgb(70, 60, 60); /* Brighter color */
     padding: 10px 0;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 50, 50, 0.7); /* Brighter shadow */
     margin: 0 auto;
 }
 
 .camera-container {
-    border: 2px solid #333;
+    border: 2px solid #555; /* Brighter border */
     border-radius: 10px;
     overflow: hidden;
 }
@@ -69,13 +69,13 @@ video {
     justify-content: space-around; /* Distribute items evenly */
     align-items: center; /* Center vertically */
     overflow: hidden;
-    background: linear-gradient(#2e2a2a, #9a9a99, #2e2a2a);
+    background: linear-gradient(#4e4a4a, #b0b0b0, #4e4a4a); /* Brighter gradient */
     width: 100%;
     text-align: center;
     position: absolute;
     bottom: 0;
     padding: 80px 0;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 50, 50, 0.7); /* Brighter shadow */
     margin: 0 auto;
 }
 
@@ -84,7 +84,7 @@ video {
     max-width: 150px; /* Optional: Set a max width */
     overflow: hidden;
     text-align: center;
-    background-color: rgb(120, 11, 11);
+    background-color: rgb(150, 20, 20); /* Brighter color */
     padding: 8px 0;
     margin: 0 10px; /* Add some spacing between items */
     position: relative;
@@ -98,9 +98,9 @@ video {
     max-width: 200px; /* Optional: Set a max width */
     overflow: hidden;
     text-align: center;
-    background-color: rgb(50, 44, 44);
+    background-color: rgb(70, 60, 60); /* Brighter color */
     padding: 8px 0;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 50, 50, 0.7); /* Brighter shadow */
     margin: 0 10px; /* Add some spacing between items */
     position: relative;
 }
@@ -110,19 +110,7 @@ video {
     white-space: nowrap;
     font-family: 'DigitalFont', Courier, monospace;
     font-size: 70px;
-    color: red;
-    position: relative;
-    width: 100%;
-    left: 0%;
-    bottom: 0px;
-}
-
-.dashboard-text {
-    display: inline-flex;
-    white-space: nowrap;
-    font-family: 'DigitalFont', Courier, monospace;
-    font-size: 70px;
-    color: red;
+    color: #ff3333; /* Brighter color */
     position: relative;
     width: 100%;
     left: 0%;
@@ -176,7 +164,7 @@ video {
     animation: scroll 65s linear infinite;
     font-family: 'DigitalFont', Courier, monospace;
     font-size: 1.5em;
-    color: red;
+    color: #ff3333; /* Brighter color */
     position: relative;
 }
 
@@ -201,7 +189,7 @@ video {
     text-align: center;
     background-color: black;
     padding: 10px 0;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 50, 50, 0.7); /* Brighter shadow */
     margin: 0 auto;
     position: relative;
 }
@@ -209,11 +197,11 @@ video {
 .image {
     position: absolute;
     top: 200px; 
-    left: 78%;
+    left: 87%;
     transform: translateX(-50%);
     width: 360px; 
     height: 300px; 
-    border: 1px solid #f9f2f2; 
+    border: 1px solid #ffcccc; /* Brighter border */
     background-size: cover;
     background-position: center;
-} 
+}
