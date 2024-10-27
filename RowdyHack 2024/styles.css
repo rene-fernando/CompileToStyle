@@ -205,3 +205,18 @@ video {
     background-size: cover;
     background-position: center;
 }
+
+.img-text {
+    position: absolute;
+    font-family: 'DigitalFont', serif;
+    left: 87%;
+    transform: translateX(-50%);
+    top: 490px;
+    font-size: 15px;
+    background: linear-gradient(#ff3333, #ffcc33, #ffff33); /* Brighter colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
