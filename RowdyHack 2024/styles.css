@@ -35,7 +35,7 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom right, black, rgb(24, 24, 121), rgb(62, 52, 120), rgb(24, 24, 121), black);
+    background-color: black;
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -46,7 +46,7 @@ body {
     overflow: hidden;
     width: 95%;
     text-align: center;
-    background-color: black;
+    background-color: rgb(50, 44, 44);
     padding: 10px 0;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     margin: 0 auto;
@@ -64,17 +64,10 @@ video {
     height: auto;
 }
 
-.dashboard-img {
-    width: 100vw;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    object-fit: cover;
-}
-
 .dashboard {
+    display: flex;
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center; /* Center vertically */
     overflow: hidden;
     background: linear-gradient(#2e2a2a, #9a9a99, #2e2a2a);
     width: 100%;
@@ -86,37 +79,42 @@ video {
     margin: 0 auto;
 }
 
-.dashboard-month {
+.tape {
+    flex: 1; /* Allow items to grow and shrink */
+    max-width: 150px; /* Optional: Set a max width */
     overflow: hidden;
-    width: 110px;
     text-align: center;
-    background-color: black;
+    background-color: rgb(120, 11, 11);
     padding: 8px 0;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-    margin: 0 auto;
-    position: fixed;
-}
-
-.dashboard-year {
-    overflow: hidden;
-    width: 175px;
-    text-align: center;
-    background-color: black;
-    padding: 8px 0;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-    margin: 0 auto;
-    position: fixed;
-}
-
-.dashboard-2text {
-    overflow: hidden;
-    width: 80px;
-    text-align: center;
-    background-color: black;
-    padding: 8px 0;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-    margin: 0 auto;
+    margin: 0 10px; /* Add some spacing between items */
     position: relative;
+}
+
+.dashboard-month,
+.dashboard-day,
+.dashboard-year,
+.dashboard-2text {
+    flex: 1; /* Allow items to grow and shrink */
+    max-width: 200px; /* Optional: Set a max width */
+    overflow: hidden;
+    text-align: center;
+    background-color: rgb(50, 44, 44);
+    padding: 8px 0;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    margin: 0 10px; /* Add some spacing between items */
+    position: relative;
+}
+
+.dashboard-text {
+    display: inline-flex;
+    white-space: nowrap;
+    font-family: 'DigitalFont', Courier, monospace;
+    font-size: 70px;
+    color: red;
+    position: relative;
+    width: 100%;
+    left: 0%;
+    bottom: 0px;
 }
 
 .dashboard-text {
