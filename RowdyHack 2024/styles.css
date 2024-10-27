@@ -16,15 +16,14 @@
     font-style: normal;
 }
 
-
 .delorean {
     height: 30vh;
-    position : absolute;
+    position: absolute;
     right: 0;
     bottom: 160px;
 }
 
-.gradient-text{
+.gradient-text {
     font-family: 'Backtothefuture2002', serif;
     font-size: 50px;
     background: linear-gradient(#ff0000, #ff9900, #ffff00);
@@ -36,11 +35,11 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom right,black,rgb(24, 24, 121), rgb(62, 52, 120), rgb(24, 24, 121),black);
-    background-size: cover; /* Ensures the gradient stretches across the entire page */
-    background-attachment: fixed; /* Keeps the gradient in place during scrolling */
+    background-image: linear-gradient(to bottom right, black, rgb(24, 24, 121), rgb(62, 52, 120), rgb(24, 24, 121), black);
+    background-size: cover;
+    background-attachment: fixed;
     margin: 0;
-    height: 100vh; /* Sets body height to 100% of viewport height */
+    height: 100vh;
 }
 
 .ticker-container {
@@ -51,14 +50,12 @@ body {
     padding: 10px 0;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     margin: 0 auto;
-    position: relative;
 }
 
 .camera-container {
     border: 2px solid #333;
     border-radius: 10px;
     overflow: hidden;
-    
 }
 
 video {
@@ -68,13 +65,13 @@ video {
 }
 
 .dashboard-img {
-    width: 100vw;             /* Full width of the viewport */
-    height: auto;             /* Keeps the aspect ratio */
-    position: fixed;          /* Keeps it fixed to the viewport */
+    width: 100vw;
+    height: auto;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;              /* Places it behind other content */
-    object-fit: cover;        /* Ensures it covers the entire width */
+    z-index: -1;
+    object-fit: cover;
 }
 
 .dashboard {
@@ -82,12 +79,11 @@ video {
     background: linear-gradient(#2e2a2a, #9a9a99, #2e2a2a);
     width: 100%;
     text-align: center;
-    position : absolute;
-    bottom:0;
+    position: absolute;
+    bottom: 0;
     padding: 80px 0;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     margin: 0 auto;
-
 }
 
 .dashboard-month {
@@ -101,7 +97,7 @@ video {
     position: fixed;
 }
 
-.dashboard-year{
+.dashboard-year {
     overflow: hidden;
     width: 175px;
     text-align: center;
@@ -124,65 +120,63 @@ video {
 }
 
 .dashboard-text {
-        display: inline-flex;
-        white-space: nowrap;
-        font-family: 'DigitalFont', Courier, monospace; /* Digital font style */
-        font-size: 70px;
-        color: red;
-        position: relative;
-        width: 100%;
-        left: 0%;
-        bottom: 0px;
+    display: inline-flex;
+    white-space: nowrap;
+    font-family: 'DigitalFont', Courier, monospace;
+    font-size: 70px;
+    color: red;
+    position: relative;
+    width: 100%;
+    left: 0%;
+    bottom: 0px;
 }
 
 .month-position {
     position: fixed;
-    bottom: 85px;  
-    left: 18px;    
-    margin: 10px; 
-    z-index: 10; 
+    bottom: 85px;
+    left: 18px;
+    margin: 10px;
+    z-index: 10;
 }
 
 .year-position {
     position: fixed;
-    bottom: 85px;  
-    left: 335px;    
-    margin: 10px; 
-    z-index: 10; 
+    bottom: 85px;
+    left: 335px;
+    margin: 10px;
+    z-index: 10;
 }
 
 .day-position {
     position: fixed;
-    bottom: 85px;  
-    left: 200px;    
-    margin: 10px; 
-    z-index: 10; 
+    bottom: 85px;
+    left: 200px;
+    margin: 10px;
+    z-index: 10;
 }
 
 .hour-position {
     position: fixed;
-    bottom: 85px;  
-    right: 130px;    
-    margin: 10px; 
-    z-index: 10; 
+    bottom: 85px;
+    right: 130px;
+    margin: 10px;
+    z-index: 10;
 }
 
 .minute-position {
     position: fixed;
-    bottom: 85px;  
-    right: 1px;    
-    margin: 10px; 
-    z-index: 10; 
+    bottom: 85px;
+    right: 1px;
+    margin: 10px;
+    z-index: 10;
 }
-
-bottom-
 
 /* Ticker Scrolling Text */
 .ticker {
     display: inline-flex;
     white-space: nowrap;
     animation: scroll 65s linear infinite;
-    font-family: 'DigitalFont', Courier, monospace; /* Digital font style */
+    font-family: 'DigitalFont', Courier, monospace;
     font-size: 1.5em;
     color: red;
     position: relative;

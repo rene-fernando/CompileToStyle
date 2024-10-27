@@ -52,6 +52,23 @@
         </div>
     </div>
     <img src="./assets/1981-delorean-back-to-the-future-_0002_3-removebg-preview.png" alt="1981 DeLorean" class="delorean"/>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const ticker = document.querySelector('.ticker');
+            const tickerWidth = ticker.scrollWidth;
+            const containerWidth = ticker.parentElement.offsetWidth;
 
+            let startPosition = containerWidth;
+            function animateTicker() {
+                startPosition -= 2; // Adjust speed by changing this value
+                if (startPosition < -tickerWidth) {
+                    startPosition = containerWidth;
+                }
+                ticker.style.transform = `translateX(${startPosition}px)`;
+                requestAnimationFrame(animateTicker);
+            }
+            animateTicker();
+        });
+    </script>
 </body>
 </html>
