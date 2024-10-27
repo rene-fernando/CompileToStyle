@@ -161,7 +161,7 @@ video {
 .ticker {
     display: inline-flex;
     white-space: nowrap;
-    animation: scroll 65s linear infinite;
+    animation: scroll 2000s linear infinite;
     font-family: 'DigitalFont', Courier, monospace;
     font-size: 1.5em;
     color: #ff3333; /* Brighter color */
@@ -211,7 +211,7 @@ video {
     font-family: 'DigitalFont', serif;
     left: 87%;
     transform: translateX(-50%);
-    top: 490px;
+    top: 170px;
     font-size: 15px;
     background: linear-gradient(#ff3333, #ffcc33, #ffff33); /* Brighter colors */
     -webkit-background-clip: text;
