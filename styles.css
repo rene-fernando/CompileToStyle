@@ -50,8 +50,19 @@ body {
     padding: 10px 0;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     margin: 0 auto;
+    position: relative;
 }
 
+.camera-container {
+    border: 2px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
 .dashboard {
     overflow: hidden;
     background: linear-gradient(#2e2a2a, #9a9a99, #2e2a2a);
@@ -65,14 +76,24 @@ body {
 
 }
 
+.dashboard-text {
+        display: inline-flex;
+        white-space: nowrap;
+        font-family: 'DigitalFont', Courier, monospace; /* Digital font style */
+        font-size: 4rem;
+        color: red;
+        position: relative;
+}
+
 /* Ticker Scrolling Text */
 .ticker {
     display: inline-flex;
     white-space: nowrap;
-    animation: scroll 20s linear infinite;
+    animation: scroll 65s linear infinite;
     font-family: 'DigitalFont', Courier, monospace; /* Digital font style */
     font-size: 1.5em;
     color: red;
+    position: relative;
 }
 
 /* Space between items */
