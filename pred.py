@@ -1,7 +1,10 @@
 import cv2
 from ultralytics import YOLO
 import numpy as np
-
+import base64
+import time
+from fastapi import FastAPI
+from fastapi.responses import FileResponse
 # Load the YOLOv8 model
 
 model = YOLO('./runs/detect/train28/weights/best.pt')  # Use the YOLOv8 model, or load your custom model
@@ -20,13 +23,18 @@ helmet=cv2.imread('./shirts/helmet.png', cv2.IMREAD_UNCHANGED)
 paths="./shirts/"
 listOutfits=[[shirt_image,lshoulder_image,rshoulder_image],[princess_shirt,princessl,princessr]]
 # Open the webcam (0 is the default camera)
+ 
 cap = cv2.VideoCapture(0)
 shirtx=1920
 if not cap.isOpened():
     print("Error: Could not open webcam.")
     exit()
 
+
+
+    
 while True:
+    time.sleep(1.5)
     ret, frame = cap.read()
 
     if not ret:
@@ -74,7 +82,7 @@ while True:
 
                     for c in range(0, 3):  # Iterate through color channels (BGR)
                         frame[y1:y2, x1:x2, c] = (alpha_shirt * shirt_resized[:, :, c] +
-                                                  alpha_frame * frame[y1:y2, x1:x2, c])
+                                                alpha_frame * frame[y1:y2, x1:x2, c])
                 else:
                     # If no alpha channel, just overlay it directly
                     frame[y1:y2, x1:x2] = shirt_resized
@@ -103,7 +111,7 @@ while True:
 
                     for c in range(0, 3):  # Iterate through color channels (BGR)
                         frame[y1:y2, x1:x2, c] = (alpha_shirt * shirt_resized[:, :, c] +
-                                                  alpha_frame * frame[y1:y2, x1:x2, c])
+                                                alpha_frame * frame[y1:y2, x1:x2, c])
                 else:
                     # If no alpha channel, just overlay it directly
                     frame[y1:y2, x1:x2] = shirt_resized
@@ -129,19 +137,20 @@ while True:
 
                     for c in range(0, 3):  # Iterate through color channels (BGR)
                         frame[y1:y2, x1:x2, c] = (alpha_shirt * shirt_resized[:, :, c] +
-                                                  alpha_frame * frame[y1:y2, x1:x2, c])
+                                                alpha_frame * frame[y1:y2, x1:x2, c])
                 else:
                     # If no alpha channel, just overlay it directly
                     frame[y1:y2, x1:x2] = shirt_resized
             
+    
 
     # Display the frame
     cv2.imshow('YOLOv8 Webcam', frame)  # Use the updated frame with the overlay
-
+    cv2.imwrite("image.jpg",frame)
     # Press 'q' to exit the loop
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-# Release the webcam and close windows
+    # Release the webcam and close windows
 cap.release()
 cv2.destroyAllWindows()
