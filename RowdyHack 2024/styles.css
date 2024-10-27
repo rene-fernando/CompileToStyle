@@ -67,11 +67,14 @@ video {
     height: auto;
 }
 
-div.image::before{
-    content:url("./assets/dashboard.png");
-    position: absolute;
-    bottom: 50px;
+.dashboard-img {
+    width: 100vw;             /* Full width of the viewport */
+    height: auto;             /* Keeps the aspect ratio */
+    position: fixed;          /* Keeps it fixed to the viewport */
+    top: 0;
     left: 0;
+    z-index: -1;              /* Places it behind other content */
+    object-fit: cover;        /* Ensures it covers the entire width */
 }
 
 .dashboard {
@@ -89,29 +92,29 @@ div.image::before{
 
 .dashboard-month {
     overflow: hidden;
-    width: 20%;
+    width: 110px;
     text-align: center;
     background-color: black;
     padding: 8px 0;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     margin: 0 auto;
-    position: relative;
+    position: fixed;
 }
 
 .dashboard-year{
     overflow: hidden;
-    width: 22%;
+    width: 175px;
     text-align: center;
     background-color: black;
     padding: 8px 0;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
     margin: 0 auto;
-    position: relative;
+    position: fixed;
 }
 
 .dashboard-2text {
     overflow: hidden;
-    width: 12%;
+    width: 80px;
     text-align: center;
     background-color: black;
     padding: 8px 0;
@@ -127,6 +130,7 @@ div.image::before{
         font-size: 70px;
         color: red;
         position: relative;
+        width: 100%;
         left: 0%;
         bottom: 0px;
 }
