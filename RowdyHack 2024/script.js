@@ -46,3 +46,9 @@ navigator.mediaDevices.getUserMedia({ video: true })
     .catch(error => {
         console.error('Error accessing media devices.', error);
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const imageUrl = 'image.jpg'; 
+        const imageWindow = document.getElementById('image-window');
+        imageWindow.style.backgroundImage = `url(${imageUrl})`;
+    });
