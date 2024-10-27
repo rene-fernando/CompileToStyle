@@ -17,6 +17,7 @@
 }
 
 .delorean {
+    top: 370px;
     height: 30vh;
     position: absolute;
     right: 0;
@@ -92,26 +93,29 @@ video {
 
 .tape-text {
     flex: 1; /* Allow items to grow and shrink */
-    max-width: 130px; /* Optional: Set a max width */
+    min-width: 100px;
+    justify-content: space-around; /* Distribute items evenly */
+    align-items: center;
+    min-width: 100px;
+    max-width: 200px; /* Optional: Set a max width */
     overflow: hidden;
     text-align: center;
-    background-color: rgb(120, 11, 11);
+    background-color: rgb(105, 5, 5);
     padding: 8px 0;
     margin: 0 10px; /* Add some spacing between items */
     position: relative;
+
 }
 
 .tape-text {
-    flex: 1; /* Allow items to grow and shrink */
-    max-width: 150px; /* Optional: Set a max width */
-    overflow: hidden;
-    text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
-    color: rgb(196, 193, 193);
-    background-color: rgb(120, 11, 11);
-    margin: 0 10px; /* Add some spacing between items */
-    position: relative;
+    color: white;
+}
+
+.spacer {
+    height: 20px; /* Adjust the height as needed */
+    background-color: transparent; /* Ensure the background is transparent */
 }
 
 .dashboard-month,
@@ -140,6 +144,7 @@ video {
     left: 0%;
     bottom: 0px;
 }
+
 
 .month-tape-position {
     position: fixed;
